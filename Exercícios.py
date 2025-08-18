@@ -66,4 +66,9 @@ determinado_numero = 50
 numeros = {1:50, 2:30, 3:75, 4:28, 5:15, 6:70, 7:80, 8:12, 9:91, 10:2}
 {k:v for k, v in sorted(numeros.items(), key=lambda item: item[1])}
 
-# 13. 
+# 13. Dado um dicionário onde as chaves são palavras, ordene-o com base no comprimento das chaves.
+palavras = {"sol": 1, "cachorro": 2, "lua": 3, "computador": 4, "casa": 5, "floresta": 6, "amor": 7, "programacao": 8, "livro": 9, "amizade": 10}
+{k:v for k, v in sorted(palavras.items(), key=lambda item: len(item[0]))}
+
+# 14. Dada uma frase, crie um dicionário onde as chaves são palavras e os valores são a contagem de vezes que cada palavra aparece.
+
