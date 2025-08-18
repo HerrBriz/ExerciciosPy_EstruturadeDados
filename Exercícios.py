@@ -61,3 +61,9 @@ paises = {'EUA':'Washingtn', 'Alemanha':'Berlim', 'Japão':'Toquio', 'França':'
 numeros = {1:50, 2:30, 3:75, 4:28, 5:15, 6:70, 7:80, 8:12, 9:91, 10:2}
 determinado_numero = 50
 {k:v for k, v in numeros.items() if v > determinado_numero}
+
+# 12. Dado um dicionário, ordene-o pelos valores.
+numeros = {1:50, 2:30, 3:75, 4:28, 5:15, 6:70, 7:80, 8:12, 9:91, 10:2}
+{k:v for k, v in sorted(numeros.items(), key=lambda item: item[1])}
+
+# 13. 
