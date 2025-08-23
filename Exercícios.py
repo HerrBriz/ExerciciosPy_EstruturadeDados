@@ -71,4 +71,7 @@ palavras = {"sol": 1, "cachorro": 2, "lua": 3, "computador": 4, "casa": 5, "flor
 {k:v for k, v in sorted(palavras.items(), key=lambda item: len(item[0]))}
 
 # 14. Dada uma frase, crie um dicionário onde as chaves são palavras e os valores são a contagem de vezes que cada palavra aparece.
+frase = 'O sol brilha e o sol aquece a terra, mas o sol também ilumina a noite.'.split()
+{k:frase.count(k) for k in frase}
 
+# 15. Dado um dicionário onde os valores são números, crie um novo dicionário onde cada valor seja a raiz quadrada do original.
