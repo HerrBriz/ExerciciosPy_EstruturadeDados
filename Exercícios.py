@@ -75,6 +75,8 @@ frase = 'O sol brilha e o sol aquece a terra, mas o sol também ilumina a noite.
 {k:frase.count(k) for k in frase}
 
 # 15. Dado um dicionário onde os valores são números, crie um novo dicionário onde cada valor seja a raiz quadrada do original.
+dicio = {'a': 5, 'b': 7, 'c': 11, 'd': 25}
+novo_dicio = {k:v**(1/2) for k,v in dicio.items()}
 
 # 16. Dada uma lista de palavras, crie um dicionário onde as chaves sejam as primeiras letras e os valores sejam listas das palavras correspondentes.
 #lista = 'cax abe b13 c23 arr d12'.split()
