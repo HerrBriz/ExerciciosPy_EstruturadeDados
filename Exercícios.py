@@ -75,3 +75,12 @@ frase = 'O sol brilha e o sol aquece a terra, mas o sol também ilumina a noite.
 {k:frase.count(k) for k in frase}
 
 # 15. Dado um dicionário onde os valores são números, crie um novo dicionário onde cada valor seja a raiz quadrada do original.
+
+# 16. Dada uma lista de palavras, crie um dicionário onde as chaves sejam as primeiras letras e os valores sejam listas das palavras correspondentes.
+#lista = 'cax abe b13 c23 arr d12'.split()
+#saída:
+#{'a': ['abe', 'arr'], 'b':['b13'], 'c':['cax', 'c23'],
+#'d': ['d12']}
+lista = 'cax abe b13 c23 arr d12'.split()
+lista_primeira = [x[0] for x in lista]
+{x:[p for p in lista if p[0] == x] for x in lista_primeira}
