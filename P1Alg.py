@@ -68,4 +68,19 @@ print = ("Total: R$" + soma preços(preços))
 
 # 1° erro: Na definição da função, 'soma' e 'preço' devem estar juntos. O certo seria 'soma_preços' ou 'somapreços'.
 # 2° erro: Na segunda linha a variável 'soma' é definida para iterar a soma, mas durante a iteração é usada a variável não declarada 'total'.
-# 3° erro: 
+# 3° erro: Durante a operação de soma a variável preço pode ser um tipo string, o que causaria erro.
+# 4° erro: O 'return' está alinha com o total, e isso faria com que após cada cálculo de soma, seria exibido o valor do total.
+# 5° erro: Após print não o sinal de atribuição '='.
+# 6° erro: Em 'print' estaríamos tentando concatenar tipo string e float, causando erro.
+# ****** Correção ******
+def soma_preços(lista):
+    soma = 0.0
+    for preço in lista:
+        soma = soma + float(preço)
+    return soma
+
+preços = "19.90 35.00 12.50 9.90".split()
+print("Total: R$", soma_preços(preços))
+
+
+#6)
