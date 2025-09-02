@@ -83,4 +83,22 @@ preços = "19.90 35.00 12.50 9.90".split()
 print("Total: R$", soma_preços(preços))
 
 
-#6)
+#6) Preocupado com os gastos mensais de energia em sua casa, você irá criar um programa em Python.
+#A cada mês, o consumo base é de 120 kWh. Um novo aparelho comprado aumenta o consumo mensal em 10 kWh (de forma cumulativa e permanente).
+#Sua família pretende comprar um novo aparelho a cada 3 meses.
+#Faça um programa que calcule após quantos meses o consumo de um único mês ultrapassará 240 kWh, e imprima esse mês e o consumo atingido. (Observação: 10 kWh/mês é uma média realista para pequenos eletrodomésticos ou eletrônicos.)
+mes = 0
+consumo_base = 120
+while consumo_base <= 240:
+    mes += 1
+    if mes%3 == 0:
+        consumo_base += 10
+
+print(mes, consumo_base)
+
+
+#7) Crie uma função zigue_zague(s) que, dada uma string s, transforme em maiúsculas as letras que estiverem em posições pares (começando a contar em 0).
+#Ex: zigue_zague("Python") → "PyThOn" e zigue_zague("banana") → "BaNaNa"
+def zigue_zague(s):
+    return ''.join([x.upper() if k % 2 == 0 else x for k, x in enumerate(s)])
+
