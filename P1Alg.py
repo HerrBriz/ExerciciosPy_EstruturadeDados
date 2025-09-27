@@ -102,3 +102,57 @@ print(mes, consumo_base)
 def zigue_zague(s):
     return ''.join([x.upper() if k % 2 == 0 else x for k, x in enumerate(s)])
 
+
+#8) O código abaixo calcula o n-ésimo termo da sequência de Fibonacci, definida por f(0)=1, f(1)=1 e f(n) = f(n−1) + f(n−2):
+    def f(n):
+    a, b = 1, 1
+    k = 2
+    while k <= n:
+        a, b = b, a + b
+        k = k + 1
+    return b
+#Adapte esse código para calcular o n-ésimo termo da sequência de Pell, definida por p(0)=0, p(1)=1 e p(n)=2×p(n−1)+p(n−2), para n≥2.
+#Implemente a função pell(n) aproveitando a lógica do código acima, fazendo as modificações necessárias. Ex: se n=5, a sequência de Pell é: 0,1,2,5,12,29. Logo, pell(5) deve retornar 29.
+def pell(n):
+    a, b = 0, 1
+    k = 2
+    while k <= n:
+        a, b = b, a + 2 * b
+        k = k + 1
+    return b
+  
+
+#9) Considere o trecho de código abaixo, no qual a variável x não foi definida. O programa testa uma combinação de condições lógicas usando and e or.
+# A seguir, são apresentadas quatro saídas diferentes. Para cada uma, determine um possível valor inteiro para x que produza a saída correspondente.
+x = ? # descobrir
+if x % 2 == 0 and x < 0:
+    print("par negativo")
+elif x % 2 != 0 and x > 0 and x < 10:
+    print("impar pequeno")
+elif x % 3 == 0 or x > 100:
+    print("divisível por 3 ou grande")
+else:
+    print("caso genérico")
+
+#Respostas: -2, 3, 9, 97.
+
+#10) Execute o teste de mesa da função processa(lista) para a lista [2, 4, 1, 6, 42, 13, 10, 5].
+def processa(lista):
+    x = 0
+    achou = False
+    for i in range(len(lista)):
+        n = lista[i]
+        if n == 42:
+            achou = True
+            break
+        if n % 2 == 0:
+            x = x + 1
+        print(i, n, x, achou)
+    print(x)
+    return x
+
+#Resposta: 0 2 1 False
+#          1 4 2 False
+#          2 1 2 False
+#          3 6 3 False
+
