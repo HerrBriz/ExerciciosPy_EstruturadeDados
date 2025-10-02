@@ -63,6 +63,13 @@ def mesmas_letras(s1, s2):
 
 #8) def sanduiche_com_vogais(s). Conta quantas vezes um padrão "sanduíche com vogais" aparece em uma string. Um sanduíche com vogais é uma sequência de 3 caracteres onde o primeiro e o terceiro são vogais e o segundo pode ser qualquer caractere.
 #Exemplos: sanduiche('amazing') -> 2, sanduiche('cooool') -> 2, sanduiche('aeiouAEIOU') -> 8, sanduiche('') -> 0
+def sanduiche_com_vogais(s):
+    vogais = 'aeiou'
+    cont = 0
+    for x in range(len(s) - 2):
+        if s[x].lower() in vogais and s[x+2].lower() in vogais:
+            cont += 1
+    return cont
 
 
 #9) def soma_duplas(nums). Dada uma lista de inteiros nums, some cada número que aparece exatamente duas vezes, apenas uma vez na soma final.
